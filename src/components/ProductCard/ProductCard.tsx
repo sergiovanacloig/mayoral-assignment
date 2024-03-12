@@ -2,7 +2,8 @@ import Image from 'next/image';
 import { Button } from '../../ui-components/Button';
 import { ProductCardProps } from './ProductCard.types';
 import styles from './ProductCard.module.css';
-import { calculateDiscountedPrice, formatPrice, formatDiscount } from './ProductCard.helpers';
+import { formatPrice, formatDiscount } from './ProductCard.helpers';
+import { calculateDiscountedPrice } from '../../utils/helpers';
 
 export const ProductCard = ({ product }: ProductCardProps) => {
   const { name, image, price, discount, hasColours } = product;

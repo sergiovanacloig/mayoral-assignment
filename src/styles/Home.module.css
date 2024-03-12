@@ -15,7 +15,14 @@
   margin-bottom: 30px;
 }
 
-@media only screen and (min-width: 767px) {
+.noProducts {
+  color: var(--disabled);
+  text-align: center;
+  font-style: oblique;
+  margin-top: 100px;
+}
+
+@media screen and (min-width: 768px) {
   .header {
     flex-direction: row;
     border: none;

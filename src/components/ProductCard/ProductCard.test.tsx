@@ -1,6 +1,7 @@
 import { Product } from '../../utils/schemas/product';
+import { calculateDiscountedPrice } from '../../utils/helpers';
 import { ProductCard } from './ProductCard';
-import { calculateDiscountedPrice, formatDiscount, formatPrice } from './ProductCard.helpers';
+import { formatDiscount, formatPrice } from './ProductCard.helpers';
 import { render, screen } from '@testing-library/react';
 
 const mockProduct: Product = {
@@ -34,36 +35,6 @@ describe('ProductCard', () => {
     render(<ProductCard product={{ ...mockProduct, hasColours: true }} />);
 
     expect(screen.getByText('más colores')).toBeVisible();
-  });
-});
-
-describe('calculateDiscountedPrice', () => {
-  it('should calculate the discounted price correctly with positive discount', () => {
-    const price = 100;
-    const discount = 20;
-    const expectedDiscountedPrice = 80;
-
-    const discountedPrice = calculateDiscountedPrice(price, discount);
-
-    expect(discountedPrice).toBe(expectedDiscountedPrice);
-  });
-
-  it('should return initial price when applying 0 discount', () => {
-    const price = 100;
-    const discount = 0;
-
-    const discountedPrice = calculateDiscountedPrice(price, discount);
-
-    expect(discountedPrice).toBe(price);
-  });
-
-  it('should return initial price when applying negative discount', () => {
-    const price = 100;
-    const discount = -10;
-
-    const discountedPrice = calculateDiscountedPrice(price, discount);
-
-    expect(discountedPrice).toBe(price);
   });
 });
 

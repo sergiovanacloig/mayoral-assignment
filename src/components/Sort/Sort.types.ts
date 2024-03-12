@@ -1,13 +1,9 @@
 import { ReactNode, MouseEventHandler } from 'react';
-
-export enum Order {
-  ASC = 'asc',
-  DESC = 'desc',
-}
+import { Order } from '../../utils/schemas/order';
 
 export type SortProps = {
   className?: string;
-  onSort: (order: Order) => void;
+  onSort: (order: Order | undefined) => void;
 };
 
 export type IconButtonProps = {
