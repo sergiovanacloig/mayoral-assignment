@@ -15,9 +15,9 @@
 }
 
 .iconButton:active > .icon {
-  fill: #d6d6d6;
+  fill: var(--blue-50);
 }
 
 .icon {
-  fill: #e5e4e3;
+  fill: var(--gray-100);
 }

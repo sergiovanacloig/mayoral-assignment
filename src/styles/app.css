@@ -1,20 +1,30 @@
 :root {
-    --background-color: #fefefe;
-    --foreground-color: #ffffff;
-    --disabled: #949494;
+  --white: #ffffff;
 
-    --max-content: 1200px;
+  --gray-50: #fefefe;
+  --gray-100: #dbdbdb;
+  --gray-150: #b3b3b3;
+  --gray-200: #979797;
+
+  --blue-50: #aecaec;
+  --blue-100: #2f71c2;
+
+  --red: #d30000;
+
+  --main-background-color: var(--gray-50);
+  --shadow: 0px 0px 6px -2px rgba(0, 0, 0, 0.6);
+  --max-content: 1200px;
 }
 
 body {
-    background-color: var(--background-color);
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-size: 12px;
-    max-width: var(--max-content);
-    margin: auto;
+  background-color: var(--main-background-color);
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-size: 12px;
+  max-width: var(--max-content);
+  margin: auto;
 }
 
 main {
-    margin: 10px;
+  margin: 16px;
 }
