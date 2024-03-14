@@ -17,20 +17,22 @@ export const ProductCard = ({ product }: ProductCardProps) => {
   return (
     <article className={styles.card} data-testid="product-card">
       <Image src={image} alt={name} height={300} width={270} />
-      <p className={styles.title}>{name}</p>
-      <div className={styles.priceSection}>
-        {dicountedPrice ? (
-          <>
-            <span className={`${styles.price}, ${styles.previousPrice}`}>{priceFormatted}</span>
-            <span className={styles.discountPrice}>
-              {formatDiscount(dicountedPrice, discount)}
-            </span>
-          </>
-        ) : (
-          <span className={styles.price}>{priceFormatted}</span>
-        )}
+      <div className={styles.content}>
+        <p className={styles.title}>{name}</p>
+        <div className={styles.priceSection}>
+          {dicountedPrice ? (
+            <>
+              <span className={`${styles.price}, ${styles.previousPrice}`}>{priceFormatted}</span>
+              <span className={styles.discountPrice}>
+                {formatDiscount(dicountedPrice, discount)}
+              </span>
+            </>
+          ) : (
+            <span className={styles.price}>{priceFormatted}</span>
+          )}
+        </div>
+        {hasColours ? <span className={styles.moreColours}>más colores</span> : null}
       </div>
-      <span className={`${styles.moreColours} ${!hasColours && styles.hidden}`}>más colores</span>
       <Button className={styles.button} onClick={handleOnClick}>
         AÑADIR
       </Button>

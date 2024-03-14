@@ -13,8 +13,16 @@
   background-color: var(--white);
 }
 
-.priceSection, .moreColours, .title {
+.priceSection,
+.moreColours {
   margin: 10px 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  width: 100%;
 }
 
 .title {
@@ -22,7 +30,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-top: 20px;
+  margin: 20px 0;
   font-size: 14px;
 }
 
@@ -39,16 +47,12 @@
 
 .discountPrice {
   margin-top: 5px;
-  color:var(--red);
+  color: var(--red);
 }
 
 .moreColours {
   color: var(--gray-150);
   font-weight: 800;
-}
-
-.moreColours .hidden {
-  visibility: hidden;
 }
 
 .button {

@@ -1,8 +1,8 @@
+import { ProductCard } from './ProductCard';
+import { render, screen } from '@testing-library/react';
+import { formatDiscount, formatPrice } from './ProductCard.helpers';
 import { Product } from '../../utils/schemas/product';
 import { calculateDiscountedPrice } from '../../utils/helpers';
-import { ProductCard } from './ProductCard';
-import { formatDiscount, formatPrice } from './ProductCard.helpers';
-import { render, screen } from '@testing-library/react';
 
 const mockProduct: Product = {
   id: '1234',

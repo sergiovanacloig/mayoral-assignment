@@ -35,7 +35,7 @@ describe('Sort', () => {
 
     render(<Sort onSort={handleOnSort} />);
 
-    const minusIconButton = screen.getByTestId('minus-icon-button')
+    const minusIconButton = screen.getByTestId('minus-icon-button');
 
     userEvent.click(minusIconButton);
     userEvent.click(minusIconButton);
@@ -48,7 +48,7 @@ describe('Sort', () => {
 
     render(<Sort onSort={handleOnSort} />);
 
-    const plusIconButton = screen.getByTestId('plus-icon-button')
+    const plusIconButton = screen.getByTestId('plus-icon-button');
 
     userEvent.click(plusIconButton);
     userEvent.click(plusIconButton);

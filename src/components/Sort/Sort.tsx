@@ -1,12 +1,17 @@
+import { useState } from 'react';
 import PlusIcon from '../../icons/Plus';
 import MinusIcon from '../../icons/Minus';
 import styles from './Sort.module.css';
 import { IconButtonProps, SortProps } from './Sort.types';
 import { Order } from '../../utils/schemas/order';
-import { useState } from 'react';
 
 const IconButton = ({ icon, selected, dataTestId, onClick }: IconButtonProps) => (
-  <button data-testid={dataTestId} className={`${styles.iconButton} ${selected && styles.selected}`} type="button" onClick={onClick}>
+  <button
+    data-testid={dataTestId}
+    className={`${styles.iconButton} ${selected && styles.selected}`}
+    type="button"
+    onClick={onClick}
+  >
     {icon}
   </button>
 );
