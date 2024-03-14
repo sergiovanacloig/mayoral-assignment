@@ -16,7 +16,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
 
   return (
     <article className={styles.card} data-testid="product-card">
-      <Image src={image} alt={name} height={300} width={300} />
+      <Image src={image} alt={name} height={300} width={270} />
       <p className={styles.title}>{name}</p>
       <div className={styles.priceSection}>
         {dicountedPrice ? (

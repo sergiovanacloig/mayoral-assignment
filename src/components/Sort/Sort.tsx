@@ -5,8 +5,8 @@ import { IconButtonProps, SortProps } from './Sort.types';
 import { Order } from '../../utils/schemas/order';
 import { useState } from 'react';
 
-const IconButton = ({ icon, dataTestId, onClick }: IconButtonProps) => (
-  <button data-testid={dataTestId} className={styles.iconButton} type="button" onClick={onClick}>
+const IconButton = ({ icon, selected, dataTestId, onClick }: IconButtonProps) => (
+  <button data-testid={dataTestId} className={`${styles.iconButton} ${selected && styles.selected}`} type="button" onClick={onClick}>
     {icon}
   </button>
 );
@@ -25,11 +25,13 @@ export const Sort = ({ className, onSort }: SortProps) => {
     <div data-testid="sort-component" className={`${styles.sort} ${className}`}>
       <IconButton
         dataTestId="minus-icon-button"
+        selected={order === Order.DESC}
         onClick={() => handleOnSort(Order.DESC)}
         icon={<MinusIcon className={styles.icon} />}
       />
       <IconButton
         dataTestId="plus-icon-button"
+        selected={order === Order.ASC}
         onClick={() => handleOnSort(Order.ASC)}
         icon={<PlusIcon className={styles.icon} />}
       />

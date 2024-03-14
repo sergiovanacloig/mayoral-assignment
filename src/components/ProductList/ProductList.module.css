@@ -5,8 +5,14 @@
   width: 100%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 650px) {
   .list {
-    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .list {
+    grid-template-columns: repeat(4, 1fr);
   }
 }

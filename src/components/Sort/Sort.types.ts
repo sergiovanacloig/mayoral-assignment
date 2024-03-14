@@ -9,5 +9,6 @@ export type SortProps = {
 export type IconButtonProps = {
   icon: ReactNode;
   dataTestId: string;
+  selected?: boolean;
   onClick: MouseEventHandler<HTMLButtonElement>;
 };
