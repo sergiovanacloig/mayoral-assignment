@@ -1,0 +1,27 @@
+.wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.select {
+  height: 34px;
+  padding: 0 10px;
+  border-radius: var(--border-radius);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0 calc(10px + 24px) 0 5px;
+  cursor: pointer;
+}
+
+.select:focus {
+  outline: none;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
