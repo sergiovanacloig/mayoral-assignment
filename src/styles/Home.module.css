@@ -1,41 +1,7 @@
-.header {
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  margin: 30px 0;
-  padding-bottom: 30px;
-  border-bottom: 2px solid var(--gray-100);
-}
-
-.search {
-  width: 100%;
-}
-
-.sort {
-  margin-bottom: 30px;
-}
-
 .noProducts {
   color: var(--gray-150);
   text-align: center;
   font-style: oblique;
   margin-top: 100px;
   font-size: 14px;
-}
-
-@media screen and (min-width: 768px) {
-  .header {
-    flex-direction: row;
-    border: none;
-    padding-bottom: 0;
-  }
-
-  .search {
-    width: 50%;
-  }
-
-  .sort {
-    margin-left: auto;
-    margin-bottom: 0;
-  }
 }

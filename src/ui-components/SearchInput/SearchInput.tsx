@@ -6,7 +6,7 @@ export const SearchInput = ({
   dataTestId,
   id,
   className,
-  value,
+  defaultValue,
   placeHolder,
   onChange,
 }: SearchInputProps) => (
@@ -16,7 +16,7 @@ export const SearchInput = ({
       type="search"
       className={styles.input}
       id={id}
-      value={value}
+      defaultValue={defaultValue}
       placeholder={placeHolder}
       onChange={onChange}
     />

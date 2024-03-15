@@ -2,6 +2,7 @@ import { useMemo } from 'react';
 import { Product } from '../schemas/product';
 import { Order } from '../schemas/order';
 import { calculateDiscountedPrice } from '../../utils/helpers';
+import useParams from './useParams';
 
 type ProductsParams = {
   products: Product[];
@@ -9,7 +10,10 @@ type ProductsParams = {
   order?: Order;
 };
 
-function useFilterProducts({ products, search, order }: ProductsParams) {
+function useFilterProducts({ products }: ProductsParams) {
+  const { params } = useParams();
+  const { search, order } = params;
+
   const filteredProducts = useMemo(() => {
     let newProducts = [...products];
 

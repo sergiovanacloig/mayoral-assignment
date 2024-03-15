@@ -33,6 +33,8 @@ Funcionalidad a implementar:
 
 - Se ha incluido el dominio de Mayoral para las imagenes en el archivo `next.config.js`.
 
-- Para la capa de API, se ha optado por utilizar las API Routes de NextJs. Se ha creado la carpeta `api` dentro de `pages`, lo que permite simular el uso de una API externa de manera sencilla y transparente.
+- Para la capa de API, se ha optado por utilizar las API Routes de NextJS. Se ha creado la carpeta `api` dentro de `pages`, lo que permite simular el uso de una API externa de manera sencilla y transparente.
 
 - Se han añadido los scripts `test` y `test:watch` para lanzar los tests.
+
+- Se ha creado un nuevo hook llamado `useParams` para tratar de simular al máximo posible el uso del hook [useParams](https://nextjs.org/docs/app/api-reference/functions/use-params) de la version 13 de NextJS
