@@ -1,18 +1,23 @@
 .list {
   display: grid;
   gap: 14px;
-  grid-template-columns: 1fr 1fr;
   width: 100%;
 }
 
-@media screen and (min-width: 650px) {
-  .list {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  }
+.list.increment {
+  grid-template-columns: repeat(3, 1fr);
 }
 
-@media screen and (min-width: 1024px) {
-  .list {
+.list.decrement {
+  grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (min-width: 768px) {
+  .list.increment {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .list.decrement {
+    grid-template-columns: repeat(3, 1fr);
   }
 }

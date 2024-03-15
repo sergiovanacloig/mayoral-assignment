@@ -17,7 +17,7 @@
   width: 100%;
 }
 
-.sort {
+.columnSelector {
   margin-bottom: 30px;
 }
 
@@ -35,7 +35,7 @@
     width: 50%;
   }
 
-  .sort {
+  .columnSelector {
     margin-left: auto;
     margin-bottom: 0;
   }

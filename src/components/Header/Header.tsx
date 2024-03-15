@@ -1,5 +1,5 @@
 import { SearchInput } from '../../ui-components/SearchInput';
-import { Sort } from '../Sort';
+import { ColumnSelector } from '../ColumnSelector';
 import { Select } from '../../ui-components/Select';
 import styles from './Header.module.css';
 import useDebounceCallback from '../../utils/hooks/useDebounceCallback';
@@ -32,7 +32,7 @@ export const Header = () => {
           placeHolder="Buscar..."
           onChange={(event) => debouncedHandleSearch(event)}
         />
-        <Sort onSort={() => null} className={styles.sort} />
+        <ColumnSelector className={styles.columnSelector} />
       </div>
       <Select
         className={styles.orderBy}
