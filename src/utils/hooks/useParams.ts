@@ -9,7 +9,7 @@ type UseParamsReturn = {
 
 function useParams(): UseParamsReturn {
   const router = useRouter();
-  const params = router.query as Params;
+  const params = router?.query as Params ?? {};
 
   const setParam = (key, value) => {
     const query = { ...params };

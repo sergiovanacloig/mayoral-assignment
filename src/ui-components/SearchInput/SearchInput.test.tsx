@@ -29,7 +29,7 @@ describe('SearchInput', () => {
   it('should accept a default value', () => {
     const handleOnChange = jest.fn();
 
-    render(<SearchInput value={value} onChange={handleOnChange} />);
+    render(<SearchInput defaultValue={value} onChange={handleOnChange} />);
 
     expect(screen.getByRole('searchbox')).toHaveValue(value);
   });

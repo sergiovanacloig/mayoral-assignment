@@ -13,5 +13,6 @@ export type IconButtonProps = {
 };
 
 export type ColumnSelectorProps = {
+  dataTestId?: string;
   className?: string;
 };

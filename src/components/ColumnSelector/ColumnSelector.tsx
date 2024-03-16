@@ -15,7 +15,7 @@ const IconButton = ({ icon, selected, dataTestId, onClick }: IconButtonProps) =>
   </button>
 );
 
-export const ColumnSelector = ({ className }: ColumnSelectorProps) => {
+export const ColumnSelector = ({ dataTestId, className }: ColumnSelectorProps) => {
   const { columnSelector, setColumnSelector } = useColumnSelector();
 
   const handleOnClickIcon = (newColumnSelector: ColumnSelectorType) => {
@@ -23,7 +23,7 @@ export const ColumnSelector = ({ className }: ColumnSelectorProps) => {
   };
 
   return (
-    <div data-testid="column-selector-component" className={`${styles.selector} ${className}`}>
+    <div data-testid={dataTestId} className={`${styles.selector} ${className}`}>
       <IconButton
         dataTestId="minus-icon-button"
         selected={columnSelector === ColumnSelectorType.DECREMENT}

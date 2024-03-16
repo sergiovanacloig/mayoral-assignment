@@ -24,20 +24,22 @@ export const Header = () => {
   };
 
   return (
-    <header className={styles.header}>
+    <header data-testid="header" className={styles.header}>
       <div className={styles.row}>
         <SearchInput
           defaultValue={search as string}
           className={styles.search}
           placeHolder="Buscar..."
+          dataTestId="search-input"
           onChange={(event) => debouncedHandleSearch(event)}
         />
-        <ColumnSelector className={styles.columnSelector} />
+        <ColumnSelector dataTestId="column-selector" className={styles.columnSelector} />
       </div>
       <Select
-        className={styles.orderBy}
         value={order}
+        className={styles.orderBy}
         options={orderByPriceOptions}
+        dataTestId="order-by-price"
         onChange={handleOnSelectChange}
       />
     </header>

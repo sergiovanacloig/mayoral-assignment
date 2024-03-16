@@ -6,9 +6,11 @@ import { renderWithColumnSelectorProvider } from '../../utils/tests';
 
 describe('ColumnSelector', () => {
   it('should render component correctly', () => {
-    renderWithColumnSelectorProvider(<ColumnSelector />);
+    const dataTestId="column-selector-component";
 
-    expect(screen.getByTestId('column-selector-component')).toBeVisible();
+    renderWithColumnSelectorProvider(<ColumnSelector dataTestId={dataTestId} />);
+
+    expect(screen.getByTestId(dataTestId)).toBeVisible();
   });
 
   it(`should set columnSelector to ${ColumnSelectorType.DECREMENT} after clicking on minus icon`, () => {
