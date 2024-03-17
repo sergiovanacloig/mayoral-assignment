@@ -37,4 +37,10 @@ Funcionalidad a implementar:
 
 - Se han añadido los scripts `test` y `test:watch` para lanzar los tests.
 
-- Se ha creado un nuevo hook llamado `useParams` para tratar de simular al máximo posible el uso del hook [useParams](https://nextjs.org/docs/app/api-reference/functions/use-params) de la version 13 de NextJS
+- Se ha creado un nuevo hook llamado `useParams` para tratar de simular al máximo posible el uso del hook [useParams](https://nextjs.org/docs/app/api-reference/functions/use-params) de la version 13 de NextJS.
+
+- Se ha creado un hook para aplicar devounce a la hora de hacer la llamada a la api en el search de productos, `useDebounceCallback`.
+
+- Se ha añadido otro hook para gestionar el filtrado de los productos, tanto el search como el orderBy `useFilterProducts`.
+
+- Por último, se ha añadido un context para gestionar las columnas según la vista (desktop o móvil) `useColumnSelector`.
